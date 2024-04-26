@@ -2,6 +2,12 @@
 
 **APRUM** is an addon for the Godot game engine that provides a multithreaded task dispatcher to efficiently distribute tasks across multiple threads. It allows you to offload CPU-intensive tasks from the main thread to improve performance and responsiveness of your Godot applications.
 
+## 📦 Available on Godot Asset Library
+
+<p align="center">
+    <img alt="asset_library" src="https://raw.githubusercontent.com/demurzasty/aprum/main/.github/asset_library.png">
+</p>
+
 ## 🔨 How it works
 
 At the start of the `Dispatcher` node a fixed number of threads are initialized. Tasks to be executed concurrently are submitted to the `Dispatcher`. Submitted tasks are placed into a queue managed by the `Dispatcher`.  
@@ -16,7 +22,7 @@ To ensure thread safety and prevent race conditions, synchronization mechanisms 
 
 When the program is shutting down or the `Dispatcher` is no longer needed, the `Dispatcher` ensures that all pending tasks are completed and resources are properly released.
 
-## 📝 Simplicity
+## 📝 Developer Note
 
 As you can see, the code of this project is very simple. It's just the beginning of work on this addon, and over time, I plan to expand it with new multithreaded functionalities.
 
@@ -42,13 +48,17 @@ Keep in mind that this project is currently in a work-in-progress state. While w
 
 - **Testing**: Help identify bugs and issues by testing the project and providing feedback on your experience. Your testing efforts can help us improve the project's stability and usability.
 
-## 📦 Installation
+## 📀 Installation
 
 1. Download the `aprum` repository.
 2. Place the directory `addons/aprum` in the `addons` folder of your Godot project.
 3. Enable the addon in your project settings.
 
 ## 🎮 Usage
+
+<p align="center">
+    <img alt="asset_library" src="https://raw.githubusercontent.com/demurzasty/aprum/main/.github/dispatcher.webp" >
+</p>
 
 You can add the `Dispatcher` script to the autoloads list in Godot and use it globally or add it for scene that require high CPU usage.
 
@@ -106,6 +116,6 @@ func fibonacci(n: int) -> int:
         return fibonacci(n - 1) + fibonacci(n - 2)
 ```
 
-## License
+## 🎫 License
 
-This addon is licensed under the [MIT](LICENSE.md) License. 
+This addon is licensed under the [MIT](LICENSE.md) license. 
